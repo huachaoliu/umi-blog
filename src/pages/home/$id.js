@@ -4,11 +4,19 @@ import css from './index.less';
 
 @connect(state => state.home)
 export default class PageInfo extends React.PureComponent {
+  componentDidMount() {
+    const { dispatch, location: { pathname }} = this.props;
+    const id = pathname.split('/')[2];
+    // dispatch({ type: 'home/getPageInfo', payload: id });
+    // console.log(`../../assets/docs/home/${id}.md`);
+  }
+
   render() {
-    console.log(this.props);
+    const { dispatch, location: { pathname }} = this.props;
+    const id = pathname.split('/')[2];
     return <div className="page">
       <div className="container">
-        <h2>细数javascript中的几种数据模式</h2>
+        <iframe src={`../../assets/docs/home/${id}.md`} frameBorder="0"></iframe>
       </div>
     </div>
   }

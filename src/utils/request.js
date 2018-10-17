@@ -53,7 +53,7 @@ export default function request(
   };
 
   const newOptions = { ...defaultOptions, ...options };
-  if (['POST', 'PUT', 'DELETE'].include(newOptions.method)) {
+  if (['POST', 'PUT', 'DELETE'].indexOf(newOptions.method) > -1) {
     if (!(newOptions.body instanceof FormData)) {
       newOptions.headers = {
         Accept: 'application/json',
