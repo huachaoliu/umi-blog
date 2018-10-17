@@ -1,0 +1,1 @@
+export default props => <div>分类</div>

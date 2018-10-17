@@ -1,0 +1,14 @@
+.trigger {
+  width: 200px;
+  background: #999;
+}
+
+.el {
+  transition: max-height .5s;
+  overflow: hidden;
+  max-height: 0;
+}
+
+.trigger:hover > .el {
+  max-height: var(--max-height);
+}

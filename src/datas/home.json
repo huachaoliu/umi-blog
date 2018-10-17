@@ -1,0 +1,76 @@
+[
+  {
+    "title": "js的数据类型有哪些？",
+    "content": "啊哈哈",
+    "short": "ECMAScript有5种基本数据类型：\n Undefined,Null,Boolean,Number,String \n一种复杂数据类型: Object\nes6增加一了种数据类型：Symbol",
+    "date": "2018-10-17 15:50:11",
+    "rules": [
+      {
+        "reg": "object",
+        "color": "red"
+      },
+      {
+        "reg": "es",
+        "color": "blue"
+      },
+      {
+        "reg": "ecmascript",
+        "color": "blue"
+      },
+      {
+        "reg": "undefined",
+        "color": "black"
+      },
+      {
+        "reg": "null",
+        "color": "black"
+      },
+      {
+        "reg": "boolean",
+        "color": "black"
+      },
+      {
+        "reg": "number",
+        "color": "black"
+      },
+      {
+        "reg": "string",
+        "color": "red"
+      },
+      {
+        "reg": "数据类型",
+        "color": "green"
+      },
+      {
+        "reg": "symbol",
+        "color": "orange"
+      }
+    ],
+    "tags": [
+      "web",
+      "js",
+      "基础"
+    ],
+    "more": true
+  },
+  {
+    "title": "如何通过api获取csdn个人博客数据",
+    "content": "http://open.csdn.net/wiki/apis",
+    "short": "如何通过api获取csdn个人博客数据",
+    "date": "2018-10-17 13:54:54",
+    "rules": [{
+      "reg": "csdn",
+      "color": "red"
+    }, {
+      "reg": "博客",
+      "color": "green"
+    }, {
+      "reg": "api",
+      "color": "blue"
+    }],
+    "tags": [
+      "api",
+      "其他"
+    ]
+  }
+]

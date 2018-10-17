@@ -1,0 +1,42 @@
+.page {
+  width: 100vw;
+  height: calc(100vh - 60px);
+  line-height: 100vh;
+  text-align: center;
+  font-size: 5rem;
+  color: #fff;
+  -webkit-text-stroke: 1px crimson;
+  user-select: none;
+  cursor: pointer;
+  text-shadow: 0 1px 0 #4a4a4e, -1px -1px 0 #4a4a4e, -1px 0px 0 #343437, -2px 1px 0 #343437, -3px 2px 0 #313134, -4px 3px 0 #2f2f31, -5px 4px 0 #2c2c2f, -6px 5px 0 #2a2a2c, -7px 6px 0 #27272a, -8px 7px 0 #252527, -9px 8px 0 #232324, -10px 9px 0 #202022;
+  display: flex;
+  justify-content: center;
+  align-items: center;  
+}
+
+.title {
+  width: 600px;
+  height: 200px;
+  line-height: 200px;
+  text-align: center;
+  transition: .5s ease;
+}
+
+.key {
+  position: relative;
+  margin: 0 5px;
+  transition: all .5s ease;
+}
+
+.enter {
+  top: -10px;
+  animation: dance .5s linear alternate;
+}
+
+@keyframes dance {
+  from {
+    top: 0;
+  } to {
+    top: -10px;
+  }
+}

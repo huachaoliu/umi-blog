@@ -1,0 +1,15 @@
+{
+  "port": 8006,
+  "static": {
+    "root": "/home/dx/lhc/huachaoliu.github.io/dist/"
+  },
+  "dx": {
+    "server": {
+      "host": "192.168.99.155",
+      "port": 8090
+    },
+    "wx_server": {
+      "target": "https://qyapi.weixin.qq.com/"
+    }
+  }
+}

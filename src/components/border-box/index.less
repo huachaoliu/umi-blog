@@ -1,0 +1,39 @@
+html {
+  box-sizing: border-box;
+}
+
+:root {
+  --some-color: #da7800;
+  --some-keyword: normal;
+  --some-size: 1.25em;
+  --some-complex-value: 1px 1px 2px whitesmoke, 0 0 1em slategray, 0 0 0.2em slategray;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+.box {
+  display: inline-block;
+  width: 150px;
+  height: 150px;
+  padding: 10px;
+  background: tomato;
+  color: white;
+  border: 10px solid red;
+
+  &::selection {
+    background: deeppink;
+  }
+  
+  color: var(--some-color);
+  font-size: var(--some-size);
+  font-style: var(--some-keyword);
+  text-shadow: var(--some-complex-value);
+}
+
+.content_box {
+  box-sizing: content-box;
+}

@@ -1,0 +1,38 @@
+.card_box {
+  position: relative;
+  &::before {
+    content: '';
+    position: absolute;
+    width: 40px;
+    height: 10px;
+    background: rgba(155, 155, 155, .5);
+    left: -20px;
+    top: 16px;
+    border-radius: 2px;
+    border-left: 10px solid  #787878;
+    border-right: 10px solid  #e9e9e9;
+  }
+}
+
+.card_item {
+  flex: 1;
+  align-self: flex-start;
+  padding-left: 12px;
+}
+
+.info {
+  display: flex;
+  height: 40px;
+  >* {
+    align-self: center;
+  }
+}
+
+.time {
+  color: #a7a7a7;
+  margin-right: 24px;
+}
+
+.card_content {
+  max-height: 200px;
+}

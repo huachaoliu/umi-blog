@@ -1,0 +1,1 @@
+export default props => <div>日志</div>

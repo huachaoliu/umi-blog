@@ -1,0 +1,25 @@
+{
+  "name": "huachaoliu.github.io",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "dayjs": "^1.7.7"
+  },
+  "devDependencies": {
+    "cross-env": "^5.2.0",
+    "umi": "^2.1.2",
+    "umi-plugin-react": "^1.1.1"
+  },
+  "scripts": {
+    "start": "PORT=10000 umi dev",
+    "build": "umi build",
+    "analyze": "ANIALYZE=1 umi build",
+    "test": "umi test",
+    "lint": "eslint --ext .js src mock tests",
+    "precommit": "lint-staged"
+  },
+  "keywords": [],
+  "author": "huachaoliu",
+  "license": "ISC"
+}
