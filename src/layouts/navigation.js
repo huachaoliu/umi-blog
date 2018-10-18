@@ -21,6 +21,14 @@ export default class Navigation extends React.PureComponent {
     active: navs[0].path,
   }
 
+  componentDidMount() {
+    const { active } = this.state;
+    const { pathname } = window.location;
+    if (active !== pathname) {
+      this.setState({ active: pathname });
+    }
+  }
+
   _handlerToRoute = (path) => {
     let flag = false;
     if (path !== '/about') {

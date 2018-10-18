@@ -1,0 +1,30 @@
+[
+  {
+    "key": "web",
+    "color": "blue"
+  },
+  {
+    "key": "html",
+    "color": "orange"
+  },
+  {
+    "key": "css",
+    "color": "red"
+  },
+  {
+    "key": "js",
+    "color": "green"
+  },
+  {
+    "key": "node",
+    "color": "pink"
+  },
+  {
+    "key": "api",
+    "color": "red"
+  },
+  {
+    "key": "其他",
+    "color": "black"
+  }
+]

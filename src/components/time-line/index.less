@@ -1,0 +1,109 @@
+.timeline {
+  display: flex;
+  user-select: none;
+  height: calc(100vh - 118px);
+  overflow-y: auto;
+}
+
+.left {
+  width: 240px;
+  line-height: 32px;
+}
+
+.year {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-height: 60px;  
+  justify-content: center;
+  z-index: 2;
+
+  >* {
+    align-self: center;
+  }
+}
+
+.parent {
+  display: flex;
+  align-self: flex-start;
+  text-indent: 20px;
+
+  >* {
+    align-self: center;
+  }
+}
+
+.year_tag {
+  color: #ff3912;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.date {
+  min-height: 32px;
+  line-height: 32px;
+}
+
+.circle {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: 2px solid #ff3912;
+  position: absolute;
+  right: -7px;
+  background: #fff;
+  cursor: pointer;
+
+  &::before {
+    content: '';
+    width: 4px;
+    height: 5px;
+    background: #fff;
+    position: absolute;
+    top: -6.8px;
+    left: 2px;
+  }
+
+  &::after {
+    content: '';
+    width: 4px;
+    height: 5px;
+    background: #fff;
+    position: absolute;
+    bottom: -6.8px;
+    left: 2px;
+  }
+}
+
+.children {
+  display: flex;
+  flex-direction: column;
+}
+
+.line {
+  width: 2px;
+  min-height: 32px;
+  background: #333;
+  display: inline-block;
+  position: relative;
+}
+
+.right {
+  padding-left: 88px;
+}
+
+.block {
+  width: 100%;
+  min-width: 120px;
+  min-height: 32px;
+  line-height: 32px;
+  margin: 32px 0 64px 0;
+}
+
+.item {
+  min-height: 32px;
+  line-height: 32px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 32px;
+}

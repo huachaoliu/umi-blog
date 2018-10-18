@@ -1,0 +1,124 @@
+:root {
+  --top: 100px;
+}
+
+.plus {
+  width: 200px;
+  height: 200px;
+  line-height: 200px;
+  font-size: 36px;
+}
+
+.type {
+  width: 50vw;
+  height: 50vh;
+  // border: 1px solid  #ff3912;
+  margin: 0 auto;
+  align-self: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.tag {
+  width: 100px;
+  height: 100px;
+  text-align: center;
+  line-height: 100px;
+  cursor: pointer;
+  overflow: hidden;
+  position: relative;
+  background: #787878;
+  margin: 5px;
+
+  .mask {
+    width: 100%;
+    height: 100%;
+    background: #ff3912;
+    left: 0;    
+    position: absolute;
+    top: 100px;
+    z-index: 9;
+    line-height: 100px;
+    text-align: center;
+    font-weight: 700;
+    color: #fff;
+  }
+
+  span {
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    top: 0;
+  }
+
+  &:nth-child(1) {
+    .plus;
+
+    .mask {
+      top: -200px;
+      line-height: 200px;
+      --top: -200px;
+    }
+  }
+
+  &:nth-child(2) {
+    .plus;
+    .mask {
+      top: 200px;
+      line-height: 200px;
+      --top: 200px;
+    }
+  }
+
+  &:nth-child(3) {
+    .plus;
+    height: 100px;
+    line-height: 100px;
+    align-self: flex-start;
+    .mask {
+      top: 100px;
+      line-height: 100px;
+      --top: 100px;
+    }
+  }
+
+  &:hover {
+    .mask {
+      top: 0px;
+      animation: show .5s;
+    }
+  }
+
+  &:hover {
+    font-size: 14px;
+    animation: scaleFont .5s;
+    .mask {
+      top: 0;
+      font-size: 36px;
+    }
+  }
+
+  @keyframes scaleFont {
+    0% {
+      font-size: 36px
+    } 100% {
+      font-size: 14px;
+    }
+  }
+
+  @keyframes show {
+    0% {
+      top: var(--top);
+    }
+    15% {
+      top: var(--top);
+    } 100% {
+      top: 0;
+    }
+  }
+}
