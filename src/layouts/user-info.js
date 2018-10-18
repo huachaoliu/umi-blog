@@ -1,7 +1,7 @@
 import React from 'react';
 import router from 'umi/router';
 import classnames from 'classnames';
-import { userName } from '@/utils';
+import { userName, address } from '@/utils';
 import { Icon } from 'antd';
 import css from './index.less';
 
@@ -38,6 +38,12 @@ export default class UserInfo extends React.PureComponent {
           <img src="/head.jpg" alt="头像" />
         </div>
         <p>{userName}</p>
+
+        <div className={css.location}>
+          所在地: {address}
+        </div>
+
+        <div className={css.job}>前端工程师</div>
 
         <div className={css.tags}>
           {

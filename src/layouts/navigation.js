@@ -25,7 +25,7 @@ export default class Navigation extends React.PureComponent {
     const { active } = this.state;
     const { pathname } = window.location;
     if (active !== pathname) {
-      this.setState({ active: pathname });
+      this.setState({ active: `/${pathname.split('/')[1]}` });
     }
   }
 

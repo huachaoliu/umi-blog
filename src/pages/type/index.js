@@ -6,7 +6,7 @@ import css from './index.less';
 @connect(state => state.type)
 export default class Types extends React.PureComponent {
   _handlerRouteChange = (key) => {
-    router.push(`/type/${key}`);
+    // router.push(`/type/${key}`);
   }
   render() {
     const { list } = this.props;

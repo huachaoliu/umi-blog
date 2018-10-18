@@ -1,7 +1,7 @@
 import { PureComponent, Fragment } from 'react';
 import { connect } from 'dva';
 import withRouter from 'umi/withRouter';
-import CanvasNest from 'canvas-nest.js';
+// import CanvasNest from 'canvas-nest.js';
 import { TransitionGroup, CSSTransition } from "react-transition-group";
 import Header from './header';
 import UserInfo from './user-info';
