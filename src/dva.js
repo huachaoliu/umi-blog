@@ -5,11 +5,6 @@ export function config() {
     onError(err) {
       err.preventDefault();
       message.error(err.message);
-    },
-    initialState: {
-      global: {
-        loading: false,
-      },
-    },
+    }
   };
 }

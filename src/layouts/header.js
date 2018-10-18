@@ -10,7 +10,7 @@ export default class Header extends PureComponent {
         <span className={css.spec}>{str[0]}</span>
         <span>{str.slice(1)}</span>
       </div>
-      <Navigation />
+      <Navigation {...this.props} />
     </div>
   }
 }

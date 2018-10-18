@@ -22,12 +22,14 @@ export default class Navigation extends React.PureComponent {
   }
 
   _handlerToRoute = (path) => {
+    let flag = false;
     if (path !== '/about') {
       this.setState({ active: path });
       router.push(path);
     } else {
-      this.props.dispatch({ type: 'global/showUserInfo', payload: true });
+      flag = true;
     }
+    this.props.dispatch({ type: 'global/showUserInfo', payload: flag });
   }
 
   render() {

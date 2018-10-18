@@ -8,6 +8,7 @@ export default {
   namespace: 'home',
   state: {
     list: [],
+    path: '',
   },
   subscriptions: {
     setup({ dispatch, history }) {
@@ -38,7 +39,9 @@ export default {
     },
     *getPageInfo({ payload }, { call, put }) {
       const result = yield call(getPageInfo, payload);
-      console.log(result);
+      if (result) {
+        yield put({ type: 'savePath', payload: result.data });
+      }
     }
   },
 
@@ -47,6 +50,12 @@ export default {
       return {
         ...state,
         list: payload
+      }
+    },
+    savePath(state, { payload }) {
+      return {
+        ...state,
+        path: payload
       }
     }
   },

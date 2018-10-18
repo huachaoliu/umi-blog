@@ -6,7 +6,11 @@ export function getHomePageData() {
 }
 
 export function getPageInfo(id) {
-  return request('../docs/home/00001.md', {
-    method: 'GET',
-  });
+  return {
+    code: 0,
+    data: __dirname + `../source/${id}.html`,
+    error: {
+      msg: ''
+    }
+  }
 }

@@ -1,0 +1,17 @@
+[
+  {
+    "name": "日志",
+    "key": "log",
+    "value": 0
+  },
+  {
+    "name": "分类",
+    "key": "type",
+    "value": 0
+  },
+  {
+    "name": "标签",
+    "key": "tag",
+    "value": 5
+  }
+]

@@ -1,14 +1,13 @@
 import React from 'react';
 import dayjs from 'dayjs';
 import router from 'umi/router';
-import { FORMAT } from '../../utils';
-import Card from '../../components/card';
-import Tag from '../../components/tag';
-import HightText from '../../components/hight-text';
+import { FORMAT, tagLink } from '@/utils';
+import Card from '@/components/card';
+import Tag from '@/components/tag';
+import HightText from '@/components/hight-text';
 import { connect } from 'dva';
 import css from './index.less';
 
-const tagLink = ['js', 'css', 'api', 'web'];
 @connect(state => state.home)
 export default class Home extends React.PureComponent {
   _showMore = (id) => {
