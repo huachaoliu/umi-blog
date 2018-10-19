@@ -1,5 +1,6 @@
 import React from 'react';
 import classnames from 'classnames';
+import router from 'umi/router';
 import Link from 'umi/link';
 
 import styles from './index.css';
@@ -19,6 +20,7 @@ export default class Index extends React.PureComponent {
     this.setState({ active: n });
 
     // this.timer = setInterval(this.loop, 500);
+    router.push('/home');
   }
 
   loop = () => {

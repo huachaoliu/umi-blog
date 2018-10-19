@@ -19,9 +19,10 @@
   cursor: pointer;
   overflow: hidden;
   position: relative;
-  background: #333;
+  background: #787878;
   margin: 5px;
   color: #fff;
+  transition: all .5s linear;
 
   &:nth-child(1) {
     grid-column-start: 1;
@@ -43,6 +44,13 @@
         top: 0;
         font-size: 36px;
       }
+    }
+  }
+
+  &:nth-child(1).out {
+    --top: -200px;
+    .mask {
+      animation: hideTop .5s;
     }
   }
 
@@ -68,6 +76,13 @@
     }
   }
 
+  &:nth-child(2).out {
+    --top: 200px;
+    .mask {
+      animation: hideTop .5s;
+    }
+  }
+
   &:nth-child(3) {
     grid-column-start: 3;
     grid-column-end: 5;
@@ -88,32 +103,79 @@
     }
   }
 
+  &:nth-child(3).out {
+    .mask {
+      opacity: .5;
+      font-size: 14px;
+      animation: fadeout .5s;
+    }
+  }
+
+  &:nth-child(4).out {
+    --top: 100px;
+    .mask {
+      animation: hideTop .5s;
+    }
+  }
+
   &:nth-child(5) {
     grid-column-start: 3;
     grid-column-end: 4;
     grid-row-start: 2;
     grid-row-end: 2;
     line-height: 100px;
-    --top: -200px;
+    --top: 200px;
+
+    .mask {
+      left: 100px;
+      top: 0;
+    }
 
     &:hover {
       .mask {
+        left: 0;
         animation: fadeLeft .5s;        
       }
     }
   }
 
-  &:nth-child(6) {
+  &:nth-child(5).out {
     --top: 100px;
+    .mask {
+      animation: hideLeft .5s;
+    }
+  }
+
+  &:nth-child(6) {
+    --top: -100px;
+    .mask {
+      left: -100px;
+      top: 0;
+    }
     &:hover {
       .mask {
+        left: 0;
         animation: fadeLeft .5s;
       }
     }
   }
 
+  &:nth-child(6).out {
+    --top: -100px;
+    .mask {
+      animation: hideLeft .5s;
+    }
+  }
+
   &:nth-child(7) {
     --top: -100px;
+  }
+
+  &:nth-child(7).out {
+    --top: -100px;
+    .mask {
+      animation: hideTop .5s;
+    }
   }
 
   .mask {
@@ -144,6 +206,30 @@
     .mask {
       top: 0px;
       animation: show .5s;
+    }
+  }
+
+  @keyframes hideLeft {
+    from {
+      left: 0;
+    } to {
+      left: var(--top);
+    }
+  }
+
+  @keyframes hideTop {
+    from {
+      top: 0;
+    } to {
+      top: var(--top);
+    }
+  }
+
+  @keyframes hideMask {
+    from {
+      top: 0;
+    } to {
+      top: var(--top);      
     }
   }
 
