@@ -10,9 +10,7 @@ export default class PageInfo extends React.PureComponent {
     const id = pathname.split('/')[2];
     // <iframe className={css.viewer} src={`${yqUrl}${id}`} frameBorder="0"></iframe>
     return <div className="page">
-      <div className="container">
-        <iframe className={css.viewer} src={`/source/home/${id}`} frameBorder="0"></iframe>
-      </div>
+      <iframe className={css.viewer} src={`/source/home/${id}`} frameBorder="0"></iframe>
     </div>
   }
 }
