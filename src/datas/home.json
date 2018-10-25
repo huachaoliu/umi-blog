@@ -93,5 +93,23 @@
       "css"
     ],
     "more": true
+  },
+  {
+    "id": "00004",
+    "title": "gitlab-ci可持续集成",
+    "content": "http://www.css88.com/archives/8506",
+    "short": "使用gitlab-ci持续集成,build包",
+    "date": "2018-10-25 11:44:11",
+    "rules": [{
+      "reg": "持续集成",
+      "color": "red"
+    }, {
+      "reg": "gitlab-ci",
+      "color": "blue"
+    }],
+    "tags": [
+      "api"
+    ],
+    "more": true
   }
 ]
